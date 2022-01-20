@@ -6,7 +6,7 @@
 // *Для добавление нового элемента в конец массива используйте метод push*
 
 // Пример использования функции isPositvie()
-isPositive(3) // вернет false
+//isPositive(3) // вернет false
 //isPositive(3) // вернет true
 //isPositive('s') // Error: parameter type is not a Number
 
@@ -22,20 +22,27 @@ isPositive(3) // вернет false
 //    isPositive ()
 //}
 
+//
+//  function isPositive() {
+//      let n = 0 ;
+//      for (var i = 0; i < arguments.length; i++) {
+//          if (typeof arguments[i] == "number") {
+//              if (arguments[i] > 0 ){
+//               n=  false
+//              } else {
+//                  n= true  }
+//          } else {
+//              throw new Error('parameter type is not a Number')
+//          }
+//      }
+//      console.log(n);
+//      return n;
+// }
 
- function isPositive() {
-     let n = 0 ;
-     for (var i = 0; i < arguments.length; i++) {
-         if (typeof arguments[i] == "number") {
-             if (arguments[i] > 0 ){
-              n=  false
-             } else {
-                 n= true  }
-         } else {
-             throw new Error('parameter type is not a Number')
-         }
-     }
-     console.log(n);
-     return n;
+pos (1,2,3);
+
+function pos () {
+    for (item of arguments)  {
+console.log(item);
+    }
 }
-
