@@ -7,7 +7,7 @@
 
 // Пример использования функции isPositvie()
 //isPositive(3) // вернет false
-//isPositive(3) // вернет true
+//isPositive(-3) // вернет true
 //isPositive('s') // Error: parameter type is not a Number
 
 // Пример использования метода push
@@ -22,27 +22,65 @@
 //    isPositive ()
 //}
 
+  function isPositive() {
+      let n = 0 ;
+      for (var i = 0; i < arguments.length; i++) {
+          if (typeof arguments[i] == "number") {
+              if (arguments[i] > 0 ){
+               n=  false
+
+              } else {
+                  n= true  }
+          } else {
+              throw new Error('parameter type is not a Number')
+         }
+      }
+      console.log(n);
+      return n;
+ }
+
+
+
+
+
+ let array = [1, 2, -4, 3, -9, -1, 7];
+ let result = [];
+
+ function PP(a) {
+
+     if (!isNaN(a)) {
+         return a > 0;
+     }
+ }
+
+ for (let element of array) {
+     if (PP(element)) {
+         result.push(element);
+     }
+ }
+ console.log(result);
+
+// pos (1,2,3);
 //
-//  function isPositive() {
-//      let n = 0 ;
-//      for (var i = 0; i < arguments.length; i++) {
-//          if (typeof arguments[i] == "number") {
-//              if (arguments[i] > 0 ){
-//               n=  false
-//              } else {
-//                  n= true  }
-//          } else {
-//              throw new Error('parameter type is not a Number')
-//          }
+//  function pos () {
+//      for (item of arguments)  {
+//  console.log(item);
 //      }
-//      console.log(n);
-//      return n;
+//  }
+//
+//let mas = [1, 2, 3];
+// //f(mas);
+//
+// f ([1,2,3]);
+
+// var arr = ['a', 'b', 'c', 'd', 'f'];
+// //f (1,2,3);
+// var i = 0, arr ;
+// function f(arr) {
+//     console.log(arr[i]);
+//     i++;
+//     if (i < arr.length) f(arr);
+//
 // }
-
-pos (1,2,3);
-
-function pos () {
-    for (item of arguments)  {
-console.log(item);
-    }
-}
+//  //f(arr);
+// console.log (arr)
